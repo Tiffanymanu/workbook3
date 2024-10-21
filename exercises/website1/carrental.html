@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Centered viewport -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <title>Car Rental</title>
+  </head>
+  <body>
+    <main>
+    <h1>ACME Car Rental</h1>
+
+    <form>
+      <label for="Pickupdateinput">Pickup Date : </label>
+      <input type="date" id="Pickupdateinput" value="" />
+      <br />
+      <br />
+      <label for="NumberofDaysInput"> Number of Days : </label>
+      <input type="text" id="NumberofDaysInput" placeholder="" value="" />
+    </form>
+    <br />
+    <!-- checkbox group -->
+    <form>
+      <p>Options:</p>
+      <input type="checkbox" id="tollTag" name="rentalType" value="tolltag" checked /> Electronic Toll Tag ($3.95/day
+      plus tolls)<br />
+
+      <input type="checkbox" id="gps" name="rentalType" value="gls" /> GPS ($2.95/day)<br />
+      <input type="checkbox" id="roadside" name="rentalType" value="roadside" /> Roadside Assistance ($2.95/day)<br />
+      <br />
+      <!-- radio button group -->
+      <fieldset>
+        <legend>Under 25</legend>
+        <input type="radio" name="under25" id="Under25Yes" />
+        <label for="Under25Yes">Yes</label>
+
+        <input type="radio" name="under25Radio" id="Under25No" />
+        <label for="Under25No">No</label>
+      </fieldset>
+    </form>
+    <br />
+
+    <button onclick="estimateCost()" type="button">Estimate Total Cost</button>
+    <br />
+
+    <label for="basicCarRental"> Car Rental </label>
+    <input readonly type="number" id="basicCarRental" />
+
+    <label for="Options"> Options </label>
+    <input readonly type="number" id="Options" />
+
+    <label for="Under25Surcharge"> Under 25 surcharge </label>
+    <input readonly type="number" id="Under25Surcharge" />
+    <label for="TotalDue"> TotalDue </label>
+    <input readonly type="number" id="TotalDue" /> 
+
+   
+
+
+
+    <script src="./scripts/rental.js"></script> 
+    </main>
+  </body>
+</html>
